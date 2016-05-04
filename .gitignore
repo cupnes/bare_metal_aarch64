@@ -1,0 +1,11 @@
+*~
+*.bin
+*.o
+*.map
+*.elf
+*.dis
+tmp/
+GPATH
+GRTAGS
+GSYMS
+GTAGS
