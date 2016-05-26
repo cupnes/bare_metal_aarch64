@@ -25,7 +25,7 @@ int main(void)
 	char ch = 'A';
 
 	while (1) {
-		while (!(mu->lsr && MU_LSR_TX_IDLE) && !(mu->lsr && MU_LSR_TX_EMPTY));
+		while (!(mu->lsr & MU_LSR_TX_IDLE) && !(mu->lsr & MU_LSR_TX_EMPTY));
 		mu->io = ch++;
 		if (ch > 'Z')
 			ch = 'A';
