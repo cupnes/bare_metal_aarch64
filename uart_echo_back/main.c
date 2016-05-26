@@ -27,7 +27,7 @@ volatile struct bcm283x_mu_regs *mu = (struct bcm283x_mu_regs *)MU_BASE;
 
 void put_char(char ch)
 {
-	while (!(mu->lsr && MU_LSR_TX_IDLE) && !(mu->lsr && MU_LSR_TX_EMPTY));
+	while (!(mu->lsr & MU_LSR_TX_IDLE) && !(mu->lsr & MU_LSR_TX_EMPTY));
 	mu->io = (unsigned int)ch;
 }
 
