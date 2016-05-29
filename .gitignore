@@ -4,6 +4,7 @@
 *.map
 *.elf
 *.dis
+*.img
 tmp/
 GPATH
 GRTAGS
