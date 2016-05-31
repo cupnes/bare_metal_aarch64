@@ -2,7 +2,7 @@ TARGET=kernel8
 CROSS=aarch64-linux-gnu-
 CFLAGS=-c -Wall -Wextra
 OBJS=start.o main.o
-STEXT=0x8000
+STEXT=0x80000
 
 $(TARGET).img: $(TARGET).elf
 	$(CROSS)objcopy -O binary $< $@
